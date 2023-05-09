@@ -1,19 +1,21 @@
 '''
 Extract all the 6 training zipped files and 2 validation zipped files into data folder and then run this script
+将所有 6 个训练压缩文件和 2 个验证压缩文件提取到数据文件夹中，然后运行此脚本
 '''
 import cv2
 import numpy as np
 import os
 import zipfile
 
-## Runnin a loop throught all the zipped training file to extract all video and then extract 100 frames from each.
+# Running a loop through all the zipped training file to extract all video and then extract 100 frames from each.
+# 遍历所有压缩的训练文件以提取所有视频，然后从每个视频中提取 100 帧。
 for i in range(1,76):
     if i<10:
         zipfilename = 'training80_0'+str(i)+'.zip'
     else:
         zipfilename = 'training80_'+str(i)+'.zip'
     ## Accessing the zipfile i
-    archive = zipfile.ZipFile('data/'+zipfilename, 'r')
+    archive = zipfile.ZipFile('Users/l/Desktop/First_Impression_v2/train-1/'+zipfilename, 'r')
     zipfilename = zipfilename.split('.zip')[0]
 
     ##Extracting all videos in it and saving it all to the new folder with same name as zipped one
