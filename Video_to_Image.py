@@ -1,7 +1,7 @@
-'''
+"""
 Extract all the 6 training zipped files and 2 validation zipped files into data folder and then run this script
 将所有 6 个训练压缩文件和 2 个验证压缩文件提取到数据文件夹中，然后运行此脚本
-'''
+"""
 import cv2
 import numpy as np
 import os
